@@ -12,9 +12,9 @@ function categoryBlock(cat, i) {
           <div class="icon-chip" style="margin-bottom:16px;width:56px;height:56px;">${icon(cat.icon)}</div>
           <h2>${cat.label} Locksmith</h2>
           <p>${cat.summary}</p>
-          <ul class="chip-list">
+          <div class="chip-list">
             ${cat.items.map((i2) => `<span class="chip">${i2}</span>`).join("")}
-          </ul>
+          </div>
           <div class="hero__actions" style="margin-top:24px">
             <a class="btn btn--navy" href="${site.phoneHref}">${icon("phone", "btn__icon")}<span>Call ${site.phone}</span></a>
             <a class="btn btn--outline" href="/contact/">Request Service</a>

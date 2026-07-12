@@ -34,9 +34,9 @@ function render(loc) {
           <h2>Know ${loc.city} Like the Back of Our Hand</h2>
           <p>${loc.localFlavor}</p>
           <p class="eyebrow" style="margin-top:1.5em">Neighborhoods &amp; Areas We Cover</p>
-          <ul class="chip-list" style="margin-top:10px">
+          <div class="chip-list" style="margin-top:10px">
             ${loc.neighborhoods.map((n) => `<span class="chip">${n}</span>`).join("")}
-          </ul>
+          </div>
         </div>
         ${photoPlaceholder({ iconName: "mapPin", ratio: "4 / 5", note: `${loc.city} service area` })}
       </div>

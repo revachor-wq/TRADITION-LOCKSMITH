@@ -83,6 +83,7 @@
   --navy-600: #24486e;
   --navy-500: #2f5c86;
   --gold-600: #a67a37;
+  --gold-ink: #7a5620; /* AA-contrast gold for text on light backgrounds */
   --gold-500: #c49249;
   --gold-400: #d9a855;
   --gold-300: #e8c98a;
@@ -190,7 +191,19 @@ p {
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold-600);
+  color: var(--gold-ink);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .skip-link {
@@ -721,7 +734,7 @@ body.nav-open .nav-toggle__close {
   font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--gold-600);
+  color: var(--gold-ink);
   font-weight: 600;
   margin-bottom: 0.4em;
 }
@@ -1082,7 +1095,11 @@ body.nav-open .nav-toggle__close {
   flex-wrap: wrap;
   gap: 8px;
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
+}
+.site-footer__bottom p {
+  color: inherit;
+  margin: 0;
 }
 
 /* Mobile call FAB */

@@ -10,7 +10,7 @@ function footer() {
   return `<footer class="site-footer">
     <div class="site-footer__grid">
       <div class="footer-col footer-col--brand">
-        <a class="brand brand--footer" href="/" aria-label="${site.name} — Home">
+        <a class="brand brand--footer" href="/">
           <img src="/images/brand/emblem-sm.webp" alt="" width="48" height="30" class="brand__mark">
           <span class="brand__name">Tradition <em>Locksmith</em></span>
         </a>

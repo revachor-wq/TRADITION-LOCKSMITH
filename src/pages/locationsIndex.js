@@ -20,6 +20,7 @@ function render() {
 
   <section>
     <div class="container">
+      <h2 class="sr-only">All Treasure Coast Service Areas</h2>
       <div class="grid-4">
         ${locations
           .map(
