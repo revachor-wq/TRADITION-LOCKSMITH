@@ -4,6 +4,7 @@ const crypto = require("crypto");
 
 const site = require("./src/data/site");
 const locations = require("./src/data/locations");
+const serviceDetails = require("./src/data/serviceDetails");
 const schema = require("./src/partials/schema");
 const { layout } = require("./src/partials/layout");
 const assetVersion = require("./src/asset-version");
@@ -38,6 +39,7 @@ function buildPages() {
   const contact = require("./src/pages/contact");
   const locationsIndex = require("./src/pages/locationsIndex");
   const locationPage = require("./src/pages/locationPage");
+  const servicePage = require("./src/pages/servicePage");
   const notFound = require("./src/pages/notFound");
 
   const pages = [];
@@ -134,6 +136,24 @@ function buildPages() {
     });
   }
 
+  for (const svc of serviceDetails) {
+    pages.push({
+      route: `services/${svc.slug}`,
+      canonical: `/services/${svc.slug}/`,
+      title: svc.title,
+      description: svc.metaDescription,
+      content: servicePage.render(svc),
+      schemaHtml:
+        schema.service(svc) +
+        schema.breadcrumb([
+          { name: "Home", url: `${site.siteUrl}/` },
+          { name: "Services", url: `${site.siteUrl}/services/` },
+          { name: svc.navLabel, url: `${site.siteUrl}/services/${svc.slug}/` },
+        ]) +
+        schema.faqPage(svc.faq),
+    });
+  }
+
   for (const page of pages) {
     const html = layout({
       title: page.title,
@@ -161,7 +181,16 @@ function buildPages() {
 function routeToNavPath(route) {
   if (route === "") return "/";
   if (route.startsWith("locations")) return "/locations/";
+  if (route.startsWith("services")) return "/services/";
   return `/${route}/`;
+}
+
+function sitemapPriority(canonical) {
+  if (canonical === "/") return "1.0";
+  const isLocationDetail = canonical.startsWith("/locations/") && canonical !== "/locations/";
+  const isServiceDetail = canonical.startsWith("/services/") && canonical !== "/services/";
+  if (isLocationDetail || isServiceDetail) return "0.9";
+  return "0.7";
 }
 
 function buildSitemap(pages) {
@@ -170,7 +199,7 @@ function buildSitemap(pages) {
       (p) => `  <url>
     <loc>${site.siteUrl}${p.canonical}</loc>
     <changefreq>monthly</changefreq>
-    <priority>${p.canonical === "/" ? "1.0" : p.canonical.startsWith("/locations/") && p.canonical !== "/locations/" ? "0.9" : "0.7"}</priority>
+    <priority>${sitemapPriority(p.canonical)}</priority>
   </url>`
     )
     .join("\n");

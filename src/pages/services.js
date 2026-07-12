@@ -1,10 +1,14 @@
 const site = require("../data/site");
 const services = require("../data/services");
+const serviceDetails = require("../data/serviceDetails");
 const { icon } = require("../partials/icons");
 const { coastalSkyline, categoryIllustration } = require("../partials/illustrations");
 
+const categorySlug = { residential: "residential-locksmith", commercial: "commercial-locksmith", automotive: "automotive-locksmith" };
+
 function categoryBlock(cat, i) {
   const reversed = i % 2 === 1;
+  const slug = categorySlug[cat.id];
   return `<section id="${cat.id}" class="${reversed ? "section--sand" : ""}">
     <div class="container">
       <div class="info-split">
@@ -17,7 +21,7 @@ function categoryBlock(cat, i) {
           </div>
           <div class="hero__actions" style="margin-top:24px">
             <a class="btn btn--navy" href="${site.phoneHref}">${icon("phone", "btn__icon")}<span>Call ${site.phone}</span></a>
-            <a class="btn btn--outline" href="/contact/">Request Service</a>
+            <a class="btn btn--outline" href="/services/${slug}/">Full ${cat.label} Details</a>
           </div>
         </div>
         <div style="${reversed ? "order:1" : ""}">
@@ -53,7 +57,29 @@ function render() {
           <h2>${services.emergency.label}</h2>
           <p>${services.emergency.summary}</p>
         </div>
-        <a class="btn btn--gold" href="${site.phoneHref}" style="justify-self:start">${icon("phone", "btn__icon")}<span>Call ${site.phone}</span></a>
+        <a class="btn btn--gold" href="/services/emergency-locksmith/" style="justify-self:start">Emergency Service Details ${icon("arrowRight")}</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">Every Service</p>
+        <h2>Browse All Locksmith Services</h2>
+        <p>Each service has its own page with full details, what's included, and answers to common questions.</p>
+      </div>
+      <div class="grid-3">
+        ${serviceDetails
+          .map(
+            (s) => `<a class="location-card" href="/services/${s.slug}/">
+          <span class="location-card__county">${s.kicker}</span>
+          <h3>${s.navLabel}</h3>
+          <p>${s.metaDescription}</p>
+          <span class="location-card__link">Learn more ${icon("arrowRight")}</span>
+        </a>`
+          )
+          .join("")}
       </div>
     </div>
   </section>

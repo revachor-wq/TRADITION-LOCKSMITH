@@ -1,10 +1,14 @@
 const site = require("../data/site");
 const locations = require("../data/locations");
+const serviceDetails = require("../data/serviceDetails");
 const { icon } = require("./icons");
 
 function footer() {
   const locationLinks = locations
     .map((l) => `<li><a href="/locations/${l.slug}/">${l.city}, FL</a></li>`)
+    .join("");
+  const serviceLinks = serviceDetails
+    .map((s) => `<li><a href="/services/${s.slug}/">${s.navLabel}</a></li>`)
     .join("");
 
   return `<footer class="site-footer">
@@ -35,12 +39,7 @@ function footer() {
 
       <div class="footer-col">
         <h3>Services</h3>
-        <ul>
-          <li><a href="/services/#residential">Residential Locksmith</a></li>
-          <li><a href="/services/#commercial">Commercial Locksmith</a></li>
-          <li><a href="/services/#automotive">Automotive Locksmith</a></li>
-          <li><a href="/services/#emergency">24/7 Emergency Service</a></li>
-        </ul>
+        <ul>${serviceLinks}</ul>
       </div>
 
       <div class="footer-col">

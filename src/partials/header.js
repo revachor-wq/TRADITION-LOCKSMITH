@@ -2,14 +2,44 @@ const site = require("../data/site");
 const nav = require("../data/nav");
 const { icon } = require("./icons");
 
-function header(activePath = "/") {
-  const links = nav
+function isActive(href, activePath) {
+  return href === activePath;
+}
+
+function desktopLinks(activePath) {
+  return nav
     .map((item) => {
-      const active = item.href === activePath ? ' aria-current="page"' : "";
-      return `<li><a href="${item.href}"${active}>${item.label}</a></li>`;
+      const active = isActive(item.href, activePath) ? ' aria-current="page"' : "";
+      if (!item.children) {
+        return `<li><a href="${item.href}"${active}>${item.label}</a></li>`;
+      }
+      const submenu = item.children
+        .map((child) => `<li><a href="${child.href}">${child.label}</a></li>`)
+        .join("");
+      return `<li class="nav-dropdown">
+        <a href="${item.href}"${active} aria-haspopup="true">${item.label}${icon("chevronDown", "nav-dropdown__caret")}</a>
+        <ul class="nav-dropdown__menu">${submenu}</ul>
+      </li>`;
     })
     .join("");
+}
 
+function mobileLinks(activePath) {
+  return nav
+    .map((item) => {
+      const active = isActive(item.href, activePath) ? ' aria-current="page"' : "";
+      if (!item.children) {
+        return `<li><a href="${item.href}"${active}>${item.label}</a></li>`;
+      }
+      const submenu = item.children
+        .map((child) => `<li><a class="mobile-nav__sublink" href="${child.href}">${child.label}</a></li>`)
+        .join("");
+      return `<li><a href="${item.href}"${active}>${item.label}</a></li>${submenu}`;
+    })
+    .join("");
+}
+
+function header(activePath = "/") {
   return `<header class="site-header">
     <div class="site-header__bar">
       <a class="brand" href="/">
@@ -24,7 +54,7 @@ function header(activePath = "/") {
       </a>
 
       <nav class="main-nav" aria-label="Primary">
-        <ul>${links}</ul>
+        <ul>${desktopLinks(activePath)}</ul>
       </nav>
 
       <div class="site-header__actions">
@@ -42,7 +72,7 @@ function header(activePath = "/") {
     </div>
 
     <div class="mobile-nav" id="mobile-nav">
-      <ul>${links}</ul>
+      <ul>${mobileLinks(activePath)}</ul>
       <a class="btn btn--gold btn--block" href="${site.phoneHref}">${icon("phone", "btn__icon")}<span>Call ${site.phone}</span></a>
     </div>
   </header>`;

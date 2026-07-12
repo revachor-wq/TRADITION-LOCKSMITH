@@ -69,6 +69,31 @@ function locationBusiness(location) {
   return jsonLd(data);
 }
 
+// Service schema for the six dedicated /services/<slug>/ pages, with the
+// business referenced as provider and areaServed covering every location.
+function service(svc) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${site.siteUrl}/services/${svc.slug}/#service`,
+    name: svc.navLabel,
+    serviceType: svc.navLabel,
+    description: svc.metaDescription,
+    url: `${site.siteUrl}/services/${svc.slug}/`,
+    provider: {
+      "@type": ["LocalBusiness", "Locksmith"],
+      "@id": `${site.siteUrl}/#business`,
+      name: site.name,
+      telephone: site.phone,
+    },
+    areaServed: locations.map((l) => ({
+      "@type": "City",
+      name: `${l.city}, FL`,
+    })),
+  };
+  return jsonLd(data);
+}
+
 function breadcrumb(items) {
   const data = {
     "@context": "https://schema.org",
@@ -101,4 +126,4 @@ function jsonLd(data) {
   return `<script type="application/ld+json">${JSON.stringify(data)}</script>`;
 }
 
-module.exports = { localBusiness, locationBusiness, breadcrumb, faqPage };
+module.exports = { localBusiness, locationBusiness, service, breadcrumb, faqPage };
