@@ -3,6 +3,7 @@
 module.exports = [
   {
     slug: "port-st-lucie",
+    nearby: ["fort-pierce", "jensen-beach", "palm-city", "stuart"],
     city: "Port St. Lucie",
     county: "St. Lucie County",
     title: "Locksmith in Port St. Lucie, FL | 24/7 Lockout & Rekey | Tradition Locksmith",
@@ -41,6 +42,7 @@ module.exports = [
   },
   {
     slug: "stuart",
+    nearby: ["palm-city", "jensen-beach", "hobe-sound", "port-st-lucie"],
     city: "Stuart",
     county: "Martin County",
     title: "Locksmith in Stuart, FL | Residential, Commercial & Auto | Tradition Locksmith",
@@ -79,6 +81,7 @@ module.exports = [
   },
   {
     slug: "jensen-beach",
+    nearby: ["port-st-lucie", "stuart", "palm-city", "fort-pierce"],
     city: "Jensen Beach",
     county: "Martin County",
     title: "Jensen Beach Locksmith | 24/7 Lockout, Rekey & Auto Keys | Tradition Locksmith",
@@ -117,6 +120,7 @@ module.exports = [
   },
   {
     slug: "palm-city",
+    nearby: ["stuart", "jensen-beach", "hobe-sound", "port-st-lucie"],
     city: "Palm City",
     county: "Martin County",
     title: "Palm City, FL Locksmith | Home, Business & Car Locksmith | Tradition Locksmith",
@@ -155,6 +159,7 @@ module.exports = [
   },
   {
     slug: "hobe-sound",
+    nearby: ["stuart", "palm-city", "jupiter", "jensen-beach"],
     city: "Hobe Sound",
     county: "Martin County",
     title: "Hobe Sound Locksmith | 24/7 Residential & Auto Locksmith | Tradition Locksmith",
@@ -193,6 +198,7 @@ module.exports = [
   },
   {
     slug: "fort-pierce",
+    nearby: ["port-st-lucie", "vero-beach", "jensen-beach", "stuart"],
     city: "Fort Pierce",
     county: "St. Lucie County",
     title: "Fort Pierce Locksmith | 24/7 Lockout, Rekey & Commercial Locks | Tradition Locksmith",
@@ -231,6 +237,7 @@ module.exports = [
   },
   {
     slug: "jupiter",
+    nearby: ["hobe-sound", "stuart", "palm-city", "jensen-beach"],
     city: "Jupiter",
     county: "Palm Beach County",
     title: "Jupiter, FL Locksmith | Residential, Commercial & Auto | Tradition Locksmith",
@@ -269,6 +276,7 @@ module.exports = [
   },
   {
     slug: "vero-beach",
+    nearby: ["fort-pierce", "port-st-lucie", "jensen-beach", "stuart"],
     city: "Vero Beach",
     county: "Indian River County",
     title: "Vero Beach Locksmith | 24/7 Lockout, Rekey & Auto Keys | Tradition Locksmith",

@@ -5,7 +5,7 @@ const { icon } = require("../partials/icons");
 const { coastalSkyline, photoPlaceholder } = require("../partials/illustrations");
 
 function render(loc) {
-  const others = locations.filter((l) => l.slug !== loc.slug).slice(0, 4);
+  const others = loc.nearby.map((slug) => locations.find((l) => l.slug === slug));
 
   return `
   <section class="hero">
