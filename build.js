@@ -1,10 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const site = require("./src/data/site");
 const locations = require("./src/data/locations");
 const schema = require("./src/partials/schema");
 const { layout } = require("./src/partials/layout");
+const assetVersion = require("./src/asset-version");
 
 const OUT = path.join(__dirname, "public");
 
@@ -213,6 +215,15 @@ function buildStaticAssets() {
   if (fs.existsSync(path.join(__dirname, "src/static"))) {
     copyDir(path.join(__dirname, "src/static"), OUT);
   }
+
+  // CSS/JS are served with a 1-year immutable cache (see netlify.toml), which is
+  // only safe because every page links to them with this content-hash query
+  // string — it changes whenever style.css or main.js changes, so browsers and
+  // the CDN fetch a fresh copy instead of serving a stale cached one.
+  const hash = crypto.createHash("sha256");
+  hash.update(fs.readFileSync(path.join(OUT, "css/style.css")));
+  hash.update(fs.readFileSync(path.join(OUT, "js/main.js")));
+  assetVersion.set(hash.digest("hex").slice(0, 10));
 }
 
 function main() {

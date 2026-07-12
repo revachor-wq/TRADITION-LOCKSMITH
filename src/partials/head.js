@@ -1,7 +1,9 @@
 const site = require("../data/site");
+const assetVersion = require("../asset-version");
 
 function head({ title, description, canonical, schemaHtml = "" }) {
   const url = `${site.siteUrl}${canonical}`;
+  const v = assetVersion.get();
   return `<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title}</title>
@@ -27,7 +29,7 @@ function head({ title, description, canonical, schemaHtml = "" }) {
 
   <link rel="preload" as="font" type="font/woff2" href="/fonts/jost-latin-400-normal.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-latin-700-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=${v}">
   ${schemaHtml}`;
 }
 

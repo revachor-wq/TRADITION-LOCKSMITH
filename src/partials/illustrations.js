@@ -43,14 +43,19 @@ const placeholderLabels = {
 };
 
 // Clearly-labeled placeholder used everywhere a real photo will eventually go.
-// Not photography — a brand-styled card with an icon + explicit placeholder note,
-// per project decision to avoid unverified/broken hotlinked stock images.
+// Styled like a wireframe/mockup placeholder (dashed frame, centered icon,
+// explicit caption) so it reads unmistakably as "intentional placeholder,"
+// not as a broken image — per project decision to avoid unverified/broken
+// hotlinked stock images.
 function photoPlaceholder({ iconName = "key", ratio = "4 / 3", note } = {}) {
   const label = note || placeholderLabels[iconName] || "Tradition Locksmith";
   return `
   <div class="photo-placeholder" style="--ratio:${ratio}">
-    <div class="photo-placeholder__art">${icon(iconName, "photo-placeholder__icon")}</div>
-    <span class="photo-placeholder__badge">Photo placeholder — ${label}</span>
+    <div class="photo-placeholder__frame">
+      <div class="photo-placeholder__art">${icon(iconName, "photo-placeholder__icon")}</div>
+      <span class="photo-placeholder__eyebrow">Photo Placeholder</span>
+      <span class="photo-placeholder__caption">${label}</span>
+    </div>
   </div>`;
 }
 
