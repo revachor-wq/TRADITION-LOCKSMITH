@@ -2,7 +2,7 @@ const site = require("../data/site");
 const services = require("../data/services");
 const locations = require("../data/locations");
 const { icon } = require("../partials/icons");
-const { coastalSkyline, photoPlaceholder } = require("../partials/illustrations");
+const { coastalSkyline, brandIllustration } = require("../partials/illustrations");
 
 function render(loc) {
   const others = loc.nearby.map((slug) => locations.find((l) => l.slug === slug));
@@ -38,7 +38,7 @@ function render(loc) {
             ${loc.neighborhoods.map((n) => `<span class="chip">${n}</span>`).join("")}
           </div>
         </div>
-        ${photoPlaceholder({ iconName: "mapPin", ratio: "4 / 5", note: `${loc.city} service area` })}
+        ${brandIllustration({ ratio: "4 / 5" })}
       </div>
     </div>
   </section>

@@ -1,7 +1,7 @@
 const site = require("../data/site");
 const services = require("../data/services");
 const { icon } = require("../partials/icons");
-const { coastalSkyline, photoPlaceholder } = require("../partials/illustrations");
+const { coastalSkyline, categoryIllustration } = require("../partials/illustrations");
 
 function categoryBlock(cat, i) {
   const reversed = i % 2 === 1;
@@ -21,7 +21,7 @@ function categoryBlock(cat, i) {
           </div>
         </div>
         <div style="${reversed ? "order:1" : ""}">
-          ${photoPlaceholder({ iconName: cat.icon, ratio: "4 / 3", note: `${cat.label} locksmith service` })}
+          ${categoryIllustration(cat.icon, { ratio: "4 / 3" })}
         </div>
       </div>
     </div>

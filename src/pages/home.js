@@ -2,7 +2,7 @@ const site = require("../data/site");
 const services = require("../data/services");
 const locations = require("../data/locations");
 const { icon } = require("../partials/icons");
-const { coastalSkyline, photoPlaceholder } = require("../partials/illustrations");
+const { coastalSkyline, brandIllustration } = require("../partials/illustrations");
 
 function serviceCard(cat) {
   return `<div class="service-card" id="${cat.id}">
@@ -118,7 +118,7 @@ function render() {
             </div>
           </div>
         </div>
-        ${photoPlaceholder({ iconName: "shield", ratio: "4 / 5", note: "Locksmith at work" })}
+        ${brandIllustration({ ratio: "4 / 5" })}
       </div>
     </div>
   </section>

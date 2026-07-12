@@ -1,6 +1,6 @@
 const site = require("../data/site");
 const { icon } = require("../partials/icons");
-const { coastalSkyline, photoPlaceholder } = require("../partials/illustrations");
+const { coastalSkyline, brandIllustration } = require("../partials/illustrations");
 
 function render() {
   return `
@@ -23,7 +23,7 @@ function render() {
           <p>Tradition Locksmith takes its name from the Tradition neighborhood in Port St. Lucie, where our shop is based. It's a fitting name for a locksmith, too — a trade built on old-world craftsmanship that now has to keep pace with smart locks, transponder keys, and electronic access systems.</p>
           <p>We operate as a DBA of ODA Group Services LLC (Florida Sunbiz registration #${site.sunbiz}), and we built this business around a simple idea: keep it local, answer the phone every time, and treat a homeowner's front door with the same care as a business owner's storefront or a driver's car ignition.</p>
         </div>
-        ${photoPlaceholder({ iconName: "wrench", ratio: "4 / 5", note: "Team & workshop" })}
+        ${brandIllustration({ ratio: "4 / 5" })}
       </div>
     </div>
   </section>
