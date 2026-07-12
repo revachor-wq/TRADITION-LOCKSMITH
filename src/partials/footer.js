@@ -1,0 +1,59 @@
+const site = require("../data/site");
+const locations = require("../data/locations");
+const { icon } = require("./icons");
+
+function footer() {
+  const locationLinks = locations
+    .map((l) => `<li><a href="/locations/${l.slug}/">${l.city}, FL</a></li>`)
+    .join("");
+
+  return `<footer class="site-footer">
+    <div class="site-footer__grid">
+      <div class="footer-col footer-col--brand">
+        <a class="brand brand--footer" href="/" aria-label="${site.name} — Home">
+          <img src="/images/brand/emblem-sm.webp" alt="" width="48" height="30" class="brand__mark">
+          <span class="brand__name">Tradition <em>Locksmith</em></span>
+        </a>
+        <p class="footer-col__tagline">Serving the Treasure Coast, Florida</p>
+        <p class="footer-col__legal">${site.legalName}<br>Sunbiz Reg. #${site.sunbiz}</p>
+        <div class="footer-social" aria-label="Directions">
+          <a href="${site.mapsDirectionsUrl}" target="_blank" rel="noopener noreferrer" aria-label="Get directions on Google Maps">${icon("mapPin")}</a>
+          <a href="${site.phoneHref}" aria-label="Call ${site.name}">${icon("phone")}</a>
+          <a href="mailto:${site.email}" aria-label="Email ${site.name}">${icon("mail")}</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul class="footer-contact">
+          <li><a href="${site.phoneHref}">${icon("phone")}<span>${site.phone}</span></a></li>
+          <li><a href="mailto:${site.email}">${icon("mail")}<span>${site.email}</span></a></li>
+          <li><a href="${site.mapsDirectionsUrl}" target="_blank" rel="noopener noreferrer">${icon("mapPin")}<span>${site.address.street}<br>${site.address.city}, ${site.address.state} ${site.address.zip}</span></a></li>
+          <li>${icon("clock")}<span>${site.hours}</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services/#residential">Residential Locksmith</a></li>
+          <li><a href="/services/#commercial">Commercial Locksmith</a></li>
+          <li><a href="/services/#automotive">Automotive Locksmith</a></li>
+          <li><a href="/services/#emergency">24/7 Emergency Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Service Areas</h3>
+        <ul class="footer-locations">${locationLinks}</ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; ${new Date().getFullYear()} ${site.name}. All rights reserved.</p>
+      <p class="site-footer__disclaimer">Site imagery is brand illustration placeholder pending on-location photography.</p>
+    </div>
+  </footer>`;
+}
+
+module.exports = { footer };

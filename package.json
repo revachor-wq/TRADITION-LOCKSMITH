@@ -1,0 +1,15 @@
+{
+  "name": "tradition-locksmith",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tradition Locksmith — production static site (traditionlocksmith.com)",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node build.js && npx --yes serve public -l 8080"
+  },
+  "devDependencies": {
+    "@fontsource/jost": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8"
+  }
+}
