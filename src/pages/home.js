@@ -123,7 +123,7 @@ function render() {
     </div>
   </section>
 
-  <section class="section--navy">
+  <section class="section--navy wave-top">
     <div class="container">
       <div class="section-head section-head--center">
         <p class="eyebrow">How It Works</p>
@@ -167,7 +167,7 @@ function render() {
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band wave-top">
     <div class="container">
       <h2>Ready When You Are</h2>
       <p>Whether it's a late-night lockout or a scheduled rekey, Tradition Locksmith is one call away, 24/7.</p>

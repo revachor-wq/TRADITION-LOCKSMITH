@@ -120,7 +120,7 @@ function render(service) {
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band wave-top">
     <div class="container">
       <h2>${service.navLabel}, Available 24/7</h2>
       <p>Call now and we'll get a locksmith headed your way, anywhere across the Treasure Coast.</p>

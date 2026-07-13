@@ -36,7 +36,7 @@ function render() {
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band wave-top">
     <div class="container">
       <h2>Don't See Your City?</h2>
       <p>Call us anyway — we may still be able to help, even just outside our core coverage area.</p>

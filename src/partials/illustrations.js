@@ -40,6 +40,24 @@ function coastalSkyline(cls = "hero-skyline") {
   </svg>`;
 }
 
+// Faint recurring coastal watermark (palm + horizon line) for the footer, so
+// the logo's motif shows up beyond just hero sections without adding visual
+// noise — very low opacity, purely decorative, aria-hidden.
+function footerWatermark(cls = "footer-watermark") {
+  return `
+  <svg class="${cls}" viewBox="0 0 420 420" aria-hidden="true" focusable="false">
+    <g opacity="0.07" fill="#C49249">
+      <path d="M300 340c-6-56-50-86-50-86s16 50 50 86Z"/>
+      <path d="M300 340c14-66-10-108-10-108s-26 56 10 108Z"/>
+      <path d="M300 340c-26-52-76-68-76-68s26 42 76 68Z"/>
+      <path d="M300 340c30-48 20-98 20-98s-40 38-20 98Z"/>
+      <path d="M300 340c-4-62 30-104 30-104s10 62-30 104Z"/>
+      <rect x="290" y="220" width="16" height="120" rx="6"/>
+    </g>
+    <path d="M60 380 Q 180 350 300 380 T 540 380" fill="none" stroke="#C49249" stroke-width="3" opacity="0.08"/>
+  </svg>`;
+}
+
 let uid = 0;
 function nextId(prefix) {
   uid += 1;
@@ -183,4 +201,4 @@ function categoryIllustration(iconName, { ratio = "4 / 3" } = {}) {
   </div>`;
 }
 
-module.exports = { coastalSkyline, brandIllustration, categoryIllustration };
+module.exports = { coastalSkyline, brandIllustration, categoryIllustration, footerWatermark };

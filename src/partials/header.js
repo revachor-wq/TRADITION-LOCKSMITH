@@ -43,10 +43,7 @@ function header(activePath = "/") {
   return `<header class="site-header">
     <div class="site-header__bar">
       <a class="brand" href="/">
-        <picture>
-          <source srcset="/images/brand/emblem-sm.webp" type="image/webp">
-          <img src="/images/brand/emblem-sm.webp" alt="" width="56" height="35" class="brand__mark" loading="eager">
-        </picture>
+        <img src="/images/brand/emblem-sm.png" alt="" width="52" height="38" class="brand__mark" loading="eager">
         <span class="brand__type">
           <span class="brand__name">Tradition <em>Locksmith</em></span>
           <span class="brand__tag">Serving the Treasure Coast, Florida</span>

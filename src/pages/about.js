@@ -68,7 +68,7 @@ function render() {
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band wave-top">
     <div class="container">
       <h2>Questions Before You Call?</h2>
       <p>Reach out any time — we're happy to explain what a job involves before we ever pick up a tool.</p>

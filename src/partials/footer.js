@@ -2,6 +2,7 @@ const site = require("../data/site");
 const locations = require("../data/locations");
 const serviceDetails = require("../data/serviceDetails");
 const { icon } = require("./icons");
+const { footerWatermark } = require("./illustrations");
 
 function footer() {
   const locationLinks = locations
@@ -12,10 +13,11 @@ function footer() {
     .join("");
 
   return `<footer class="site-footer">
+    ${footerWatermark()}
     <div class="site-footer__grid">
       <div class="footer-col footer-col--brand">
         <a class="brand brand--footer" href="/">
-          <img src="/images/brand/emblem-sm.webp" alt="" width="48" height="30" class="brand__mark">
+          <img src="/images/brand/emblem-sm.png" alt="" width="44" height="32" class="brand__mark">
           <span class="brand__name">Tradition <em>Locksmith</em></span>
         </a>
         <p class="footer-col__tagline">Serving the Treasure Coast, Florida</p>

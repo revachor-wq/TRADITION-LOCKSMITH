@@ -135,7 +135,7 @@ function render(loc) {
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band wave-top">
     <div class="container">
       <h2>Locked Out in ${loc.city}?</h2>
       <p>Call now and we'll get a locksmith headed your way — available 24 hours a day, 7 days a week.</p>

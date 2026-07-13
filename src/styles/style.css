@@ -885,6 +885,25 @@ body.nav-open .nav-toggle__close {
   margin-bottom: 0.2em;
 }
 
+/* Subtle recurring wave-line motif, echoing the logo's water line — used to
+   mark the top edge of dark sections so the coastal theme isn't confined to
+   the hero alone. Pure CSS (inline SVG data URI), no raster noise. */
+.wave-top {
+  position: relative;
+}
+.wave-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAiPjxwYXRoIGQ9Ik0wIDEwIFEgMjUgMCA1MCAxMCBUIDEwMCAxMCBUIDE1MCAxMCBUIDIwMCAxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzQ5MjQ5IiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjU1Ii8+PC9zdmc+");
+  background-repeat: repeat-x;
+  background-size: 200px 20px;
+  opacity: 0.5;
+}
+
 /* CTA band */
 .cta-band {
   background: linear-gradient(120deg, var(--navy-900), var(--navy-700) 60%, var(--navy-600));
@@ -1047,6 +1066,16 @@ body.nav-open .nav-toggle__close {
 .site-footer {
   background: var(--navy-900);
   color: rgba(255, 255, 255, 0.82);
+  position: relative;
+  overflow: hidden;
+}
+.footer-watermark {
+  position: absolute;
+  right: -40px;
+  bottom: -20px;
+  width: 340px;
+  height: 340px;
+  pointer-events: none;
 }
 .site-footer__grid {
   max-width: var(--container);

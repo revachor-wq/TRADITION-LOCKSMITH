@@ -49,7 +49,7 @@ function render() {
 
   ${services.categories.map(categoryBlock).join("")}
 
-  <section id="emergency" class="section--navy">
+  <section id="emergency" class="section--navy wave-top">
     <div class="container">
       <div class="highlight-banner" style="background:linear-gradient(120deg, var(--navy-800), var(--navy-600));">
         <div class="highlight-banner__icon">${icon("siren")}</div>
@@ -84,7 +84,7 @@ function render() {
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band wave-top">
     <div class="container">
       <h2>Not Sure Which Service You Need?</h2>
       <p>Call and describe what's going on — we'll tell you exactly what it'll take to fix it.</p>
