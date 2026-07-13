@@ -1,11 +1,21 @@
 const site = require("../data/site");
 const services = require("../data/services");
 const locations = require("../data/locations");
+const serviceDetails = require("../data/serviceDetails");
 const { icon } = require("../partials/icons");
 const { coastalSkyline, brandIllustration } = require("../partials/illustrations");
 
+const categorySlug = {
+  residential: "residential-locksmith",
+  commercial: "commercial-locksmith",
+  automotive: "automotive-locksmith",
+};
+
+const coreServiceSlugs = new Set(Object.values(categorySlug));
+
 function render(loc) {
   const others = loc.nearby.map((slug) => locations.find((l) => l.slug === slug));
+  const specialtyServices = serviceDetails.filter((s) => !coreServiceSlugs.has(s.slug));
 
   return `
   <section class="hero">
@@ -73,10 +83,15 @@ function render(loc) {
             .slice(0, 4)
             .map((i) => `<li>${icon("checkCircle")}<span>${i}</span></li>`)
             .join("")}</ul>
+          <a class="service-card__link" href="/services/${categorySlug[cat.id]}/">Full ${cat.label.toLowerCase()} details ${icon("arrowRight")}</a>
         </div>`
           )
           .join("")}
       </div>
+      <p style="text-align:center;margin-top:28px;color:var(--ink-soft)">
+        Also available in ${loc.city}:
+        ${specialtyServices.map((s) => `<a href="/services/${s.slug}/" style="color:var(--navy-800);font-weight:600;text-decoration:underline;text-underline-offset:3px;margin-inline:4px">${s.navLabel}</a>`).join("·")}
+      </p>
     </div>
   </section>
 

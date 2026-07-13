@@ -1,5 +1,6 @@
 const site = require("../data/site");
 const serviceDetails = require("../data/serviceDetails");
+const locations = require("../data/locations");
 const { icon } = require("../partials/icons");
 const { coastalSkyline, brandIllustration, categoryIllustration } = require("../partials/illustrations");
 
@@ -102,6 +103,19 @@ function render(service) {
         </a>`
           )
           .join("")}
+      </div>
+    </div>
+  </section>
+
+  <section class="section--sand">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">Where We Work</p>
+        <h2>${service.navLabel} Across the Treasure Coast</h2>
+        <p>We provide ${service.navLabel.toLowerCase()} in every area we serve. <a href="/locations/" style="color:var(--navy-800);font-weight:600;text-decoration:underline">See our full service area map</a>, or jump straight to your city:</p>
+      </div>
+      <div class="chip-list" style="justify-content:center">
+        ${locations.map((l) => `<a class="chip" href="/locations/${l.slug}/">${l.city}, FL</a>`).join("")}
       </div>
     </div>
   </section>
