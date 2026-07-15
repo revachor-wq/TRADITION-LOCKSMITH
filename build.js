@@ -47,9 +47,9 @@ function buildPages() {
   pages.push({
     route: "",
     canonical: "/",
-    title: "Tradition Locksmith | 24/7 Locksmith Serving the Treasure Coast, FL",
+    title: "Tradition Locksmith | 24/7 Treasure Coast Locksmith",
     description:
-      "Tradition Locksmith provides 24/7 residential, commercial, and automotive locksmith service across the Treasure Coast, Florida. Based in Port St. Lucie. Call 772-244-4552.",
+      "24/7 residential, commercial & automotive locksmith service across the Treasure Coast, FL. Based in Port St. Lucie. Call 772-244-4552.",
     content: home.render(),
     schemaHtml: schema.localBusiness({
       description:
@@ -60,9 +60,9 @@ function buildPages() {
   pages.push({
     route: "services",
     canonical: "/services/",
-    title: "Locksmith Services | Residential, Commercial & Automotive | Tradition Locksmith",
+    title: "Locksmith Services | Residential, Commercial & Auto",
     description:
-      "Explore Tradition Locksmith's full range of services: residential lockouts & rekeys, commercial master key systems, automotive key programming, and 24/7 emergency service.",
+      "Tradition Locksmith's full range of services: lockouts & rekeys, master key systems, key programming, and 24/7 emergency service.",
     content: servicesPage.render(),
     schemaHtml:
       schema.localBusiness({
@@ -78,7 +78,7 @@ function buildPages() {
     canonical: "/about/",
     title: "About Tradition Locksmith | Port St. Lucie, FL",
     description:
-      "Tradition Locksmith is a Port St. Lucie-based locksmith, DBA of ODA Group Services LLC, serving the Treasure Coast with residential, commercial & automotive service.",
+      "Tradition Locksmith is a Port St. Lucie-based locksmith serving the Treasure Coast with residential, commercial & automotive service, 24/7.",
     content: about.render(),
     schemaHtml:
       schema.localBusiness({ description: "About Tradition Locksmith, a Treasure Coast, Florida locksmith." }) +
@@ -106,9 +106,9 @@ function buildPages() {
   pages.push({
     route: "locations",
     canonical: "/locations/",
-    title: "Service Areas | Treasure Coast Locksmith Coverage | Tradition Locksmith",
+    title: "Service Areas | Tradition Locksmith",
     description:
-      "Tradition Locksmith serves Port St. Lucie, Stuart, Jensen Beach, Palm City, Hobe Sound, Fort Pierce, Jupiter & Vero Beach, FL. Find your city's locksmith page.",
+      "Tradition Locksmith serves Port St. Lucie, Stuart, Jensen Beach, Fort Pierce, Jupiter, Vero Beach & more. Find your city's locksmith page.",
     content: locationsIndex.render(),
     schemaHtml:
       schema.localBusiness({ description: "Treasure Coast, Florida locksmith service areas." }) +

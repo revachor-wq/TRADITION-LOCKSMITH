@@ -5,9 +5,9 @@ module.exports = [
     slug: "residential-locksmith",
     icon: "home",
     navLabel: "Residential Locksmith",
-    title: "Residential Locksmith | Home Lockouts, Rekeys & Smart Locks | Tradition Locksmith",
+    title: "Residential Locksmith | Lockouts, Rekeys & Smart Locks",
     metaDescription:
-      "Locked out of your house? Tradition Locksmith handles home lockouts, rekeys, deadbolt installs, and smart locks across the Treasure Coast, 24/7. Call 772-244-4552.",
+      "Locked out of your house? Tradition Locksmith handles lockouts, rekeys, deadbolts & smart locks across the Treasure Coast, 24/7.",
     h1: "Residential Locksmith Services on the Treasure Coast",
     kicker: "Home & Apartment Security",
     intro:
@@ -46,9 +46,9 @@ module.exports = [
     slug: "commercial-locksmith",
     icon: "building",
     navLabel: "Commercial Locksmith",
-    title: "Commercial Locksmith | Master Key Systems & Business Security | Tradition Locksmith",
+    title: "Commercial Locksmith | Master Key Systems & Security",
     metaDescription:
-      "Tradition Locksmith provides commercial locksmith services across the Treasure Coast — master key systems, panic hardware, and business rekeys. Call 772-244-4552.",
+      "Commercial locksmith service across the Treasure Coast — master key systems, panic hardware, and business rekeys. Call 772-244-4552.",
     h1: "Commercial Locksmith Services for Treasure Coast Businesses",
     kicker: "Business & Property Security",
     intro:
@@ -87,9 +87,9 @@ module.exports = [
     slug: "automotive-locksmith",
     icon: "car",
     navLabel: "Automotive Locksmith",
-    title: "Automotive Locksmith | Car Lockouts & Key Replacement | Tradition Locksmith",
+    title: "Automotive Locksmith | Car Lockouts & Key Replacement",
     metaDescription:
-      "Locked out of your car or lost your only key? Tradition Locksmith offers mobile automotive locksmith service across the Treasure Coast, 24/7. Call 772-244-4552.",
+      "Locked out of your car or lost your only key? Tradition Locksmith offers mobile automotive locksmith service, Treasure Coast-wide, 24/7.",
     h1: "Automotive Locksmith Services — Car Lockouts & Key Replacement",
     kicker: "Mobile Vehicle Locksmith",
     intro:
@@ -128,9 +128,9 @@ module.exports = [
     slug: "emergency-locksmith",
     icon: "siren",
     navLabel: "24/7 Emergency Locksmith",
-    title: "24/7 Emergency Locksmith | Treasure Coast | Tradition Locksmith",
+    title: "24/7 Emergency Locksmith | Treasure Coast, FL",
     metaDescription:
-      "Locked out at 2am or dealing with a break-in? Tradition Locksmith answers the phone and dispatches a locksmith 24/7 across the Treasure Coast. Call 772-244-4552.",
+      "Locked out at 2am or dealing with a break-in? Tradition Locksmith answers the phone 24/7 across the Treasure Coast. Call 772-244-4552.",
     h1: "24/7 Emergency Locksmith Service on the Treasure Coast",
     kicker: "Nights, Weekends & Holidays",
     intro:
@@ -169,9 +169,9 @@ module.exports = [
     slug: "smart-lock-installation",
     icon: "chip",
     navLabel: "Smart Lock Installation",
-    title: "Smart Lock Installation | Keypad & App-Controlled Locks | Tradition Locksmith",
+    title: "Smart Lock Installation | Tradition Locksmith",
     metaDescription:
-      "Professional smart lock installation and setup across the Treasure Coast — keypad and app-controlled locks for homes, rentals, and businesses. Call 772-244-4552.",
+      "Professional smart lock installation across the Treasure Coast — keypad & app-controlled locks for homes and businesses. Call now.",
     h1: "Smart Lock Installation & Setup",
     kicker: "Keyless Entry, Done Right",
     intro:
@@ -210,9 +210,9 @@ module.exports = [
     slug: "car-key-programming",
     icon: "key",
     navLabel: "Car Key Programming",
-    title: "Car Key & Fob Programming | On-Site Service | Tradition Locksmith",
+    title: "Car Key & Fob Programming | Tradition Locksmith",
     metaDescription:
-      "On-site car key and fob programming across the Treasure Coast — transponder keys, smart fobs, and lost-key replacement. Call Tradition Locksmith at 772-244-4552.",
+      "On-site car key and fob programming across the Treasure Coast — transponder keys, smart fobs, lost-key replacement. Call 772-244-4552.",
     h1: "Car Key & Fob Programming",
     kicker: "Transponder Keys & Smart Fobs",
     intro:

@@ -6,9 +6,9 @@ module.exports = [
     nearby: ["fort-pierce", "jensen-beach", "palm-city", "stuart"],
     city: "Port St. Lucie",
     county: "St. Lucie County",
-    title: "Locksmith in Port St. Lucie, FL | 24/7 Lockout & Rekey | Tradition Locksmith",
+    title: "Locksmith in Port St. Lucie, FL | 24/7 Lockout & Rekey",
     metaDescription:
-      "Locked out in Port St. Lucie or the Tradition neighborhood? Tradition Locksmith offers 24/7 residential, commercial & automotive locksmith service. Call 772-244-4552.",
+      "Locked out in Port St. Lucie or the Tradition neighborhood? Tradition Locksmith offers 24/7 residential, commercial & auto service.",
     h1: "Port St. Lucie Locksmith, Based Right in Tradition",
     heroKicker: "Our home base",
     intro:
@@ -45,9 +45,9 @@ module.exports = [
     nearby: ["palm-city", "jensen-beach", "hobe-sound", "port-st-lucie"],
     city: "Stuart",
     county: "Martin County",
-    title: "Locksmith in Stuart, FL | Residential, Commercial & Auto | Tradition Locksmith",
+    title: "Locksmith in Stuart, FL | Residential, Commercial & Auto",
     metaDescription:
-      "Tradition Locksmith serves Stuart, FL with 24/7 lockouts, rekeys, and car key programming — from Downtown Stuart to Sailfish Point. Call 772-244-4552.",
+      "Tradition Locksmith serves Stuart, FL with 24/7 lockouts, rekeys & car key programming — from Downtown Stuart to Sailfish Point.",
     h1: "Stuart, FL Locksmith Services — Downtown to the Waterways",
     heroKicker: "Martin County seat",
     intro:
@@ -84,9 +84,9 @@ module.exports = [
     nearby: ["port-st-lucie", "stuart", "palm-city", "fort-pierce"],
     city: "Jensen Beach",
     county: "Martin County",
-    title: "Jensen Beach Locksmith | 24/7 Lockout, Rekey & Auto Keys | Tradition Locksmith",
+    title: "Jensen Beach Locksmith | 24/7 | Tradition Locksmith",
     metaDescription:
-      "Fast, friendly locksmith service in Jensen Beach, FL — home & business lockouts, rekeys, and car key replacement, 24/7. Call Tradition Locksmith at 772-244-4552.",
+      "Fast, friendly locksmith service in Jensen Beach, FL — home & business lockouts, rekeys, and car key replacement, 24/7. Call 772-244-4552.",
     h1: "Jensen Beach Locksmith, from the Causeway to the Lagoon",
     heroKicker: "Coastal Martin County",
     intro:
@@ -123,9 +123,9 @@ module.exports = [
     nearby: ["stuart", "jensen-beach", "hobe-sound", "port-st-lucie"],
     city: "Palm City",
     county: "Martin County",
-    title: "Palm City, FL Locksmith | Home, Business & Car Locksmith | Tradition Locksmith",
+    title: "Palm City, FL Locksmith | Home, Business & Car",
     metaDescription:
-      "Tradition Locksmith provides 24/7 residential, commercial, and automotive locksmith service throughout Palm City, FL. Call 772-244-4552 for fast, local help.",
+      "Tradition Locksmith provides 24/7 residential, commercial & automotive locksmith service throughout Palm City, FL. Call 772-244-4552.",
     h1: "Palm City Locksmith Services, 24/7",
     heroKicker: "Across the St. Lucie River from Stuart",
     intro:
@@ -162,9 +162,9 @@ module.exports = [
     nearby: ["stuart", "palm-city", "jupiter", "jensen-beach"],
     city: "Hobe Sound",
     county: "Martin County",
-    title: "Hobe Sound Locksmith | 24/7 Residential & Auto Locksmith | Tradition Locksmith",
+    title: "Hobe Sound Locksmith | 24/7 | Tradition Locksmith",
     metaDescription:
-      "Locksmith service in Hobe Sound, FL near Jonathan Dickinson State Park — lockouts, rekeys, and car key programming, available 24/7. Call 772-244-4552.",
+      "Locksmith service in Hobe Sound, FL near Jonathan Dickinson State Park — lockouts, rekeys, car key programming, available 24/7. Call now.",
     h1: "Hobe Sound Locksmith, Small-Town Fast",
     heroKicker: "Gateway to Jonathan Dickinson State Park",
     intro:
@@ -201,9 +201,9 @@ module.exports = [
     nearby: ["port-st-lucie", "vero-beach", "jensen-beach", "stuart"],
     city: "Fort Pierce",
     county: "St. Lucie County",
-    title: "Fort Pierce Locksmith | 24/7 Lockout, Rekey & Commercial Locks | Tradition Locksmith",
+    title: "Fort Pierce Locksmith | 24/7 | Tradition Locksmith",
     metaDescription:
-      "Tradition Locksmith serves Fort Pierce, FL — historic downtown to the waterfront — with 24/7 residential, commercial, and automotive locksmith service.",
+      "Tradition Locksmith serves Fort Pierce, FL — historic downtown to the waterfront — with 24/7 residential, commercial & automotive service.",
     h1: "Fort Pierce Locksmith — Downtown, Waterfront & Beyond",
     heroKicker: "St. Lucie County seat",
     intro:
@@ -240,9 +240,9 @@ module.exports = [
     nearby: ["hobe-sound", "stuart", "palm-city", "jensen-beach"],
     city: "Jupiter",
     county: "Palm Beach County",
-    title: "Jupiter, FL Locksmith | Residential, Commercial & Auto | Tradition Locksmith",
+    title: "Jupiter, FL Locksmith | Residential, Commercial & Auto",
     metaDescription:
-      "24/7 locksmith service in Jupiter, FL from Tradition Locksmith — lockouts, rekeys, smart lock installs, and car key programming. Call 772-244-4552.",
+      "24/7 locksmith service in Jupiter, FL — lockouts, rekeys, smart lock installs, and car key programming. Call Tradition Locksmith today.",
     h1: "Jupiter, FL Locksmith Services, 24/7",
     heroKicker: "Northern Palm Beach County",
     intro:
@@ -279,9 +279,9 @@ module.exports = [
     nearby: ["fort-pierce", "port-st-lucie", "jensen-beach", "stuart"],
     city: "Vero Beach",
     county: "Indian River County",
-    title: "Vero Beach Locksmith | 24/7 Lockout, Rekey & Auto Keys | Tradition Locksmith",
+    title: "Vero Beach Locksmith | 24/7 Lockout & Rekey",
     metaDescription:
-      "Tradition Locksmith serves Vero Beach, FL with 24/7 residential, commercial, and automotive locksmith service — Ocean Drive to mainland neighborhoods. Call 772-244-4552.",
+      "Tradition Locksmith serves Vero Beach, FL with 24/7 residential, commercial & automotive service — Ocean Drive to the mainland.",
     h1: "Vero Beach Locksmith, Barrier Island to Mainland",
     heroKicker: "Indian River County seat",
     intro:
