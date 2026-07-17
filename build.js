@@ -144,6 +144,7 @@ function buildPages() {
       description: svc.metaDescription,
       content: servicePage.render(svc),
       schemaHtml:
+        schema.localBusiness({ description: svc.metaDescription }) +
         schema.service(svc) +
         schema.breadcrumb([
           { name: "Home", url: `${site.siteUrl}/` },
@@ -236,9 +237,24 @@ function buildManifest() {
   fs.writeFileSync(path.join(OUT, "site.webmanifest"), JSON.stringify(manifest, null, 2));
 }
 
+// Conservative CSS minifier: strips comments and collapses whitespace only.
+// Safe here because the stylesheet has no string/content literals containing
+// meaningful whitespace (verified: the one data-URI is base64, which has no
+// spaces to collapse).
+function minifyCss(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*([{}:;,])\s*/g, "$1")
+    .replace(/;}/g, "}")
+    .trim();
+}
+
 function buildStaticAssets() {
   copyDir(path.join(__dirname, "src/styles"), path.join(OUT, "css"));
   copyDir(path.join(__dirname, "src/scripts"), path.join(OUT, "js"));
+  const cssPath = path.join(OUT, "css/style.css");
+  fs.writeFileSync(cssPath, minifyCss(fs.readFileSync(cssPath, "utf8")));
   copyDir(path.join(__dirname, "src/fonts"), path.join(OUT, "fonts"));
   copyDir(path.join(__dirname, "src/images"), path.join(OUT, "images"));
   if (fs.existsSync(path.join(__dirname, "src/static"))) {

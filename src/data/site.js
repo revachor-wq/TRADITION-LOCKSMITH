@@ -14,6 +14,9 @@ module.exports = {
     zip: "34986",
     county: "St. Lucie County",
   },
+  // City-level coordinates for Port St. Lucie, FL (public geographic fact,
+  // not a precise rooftop geocode of the street address).
+  geo: { latitude: 27.273, longitude: -80.3582 },
   hours: "Open 24 hours a day, 7 days a week",
   tagline: "Serving the Treasure Coast, Florida",
   serviceCategories: ["Residential", "Commercial", "Automotive"],
