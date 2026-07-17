@@ -1,7 +1,7 @@
 const site = require("../data/site");
 const assetVersion = require("../asset-version");
 
-function head({ title, description, canonical, schemaHtml = "" }) {
+function head({ title, description, canonical, schemaHtml = "", robots = "index, follow" }) {
   const url = `${site.siteUrl}${canonical}`;
   const v = assetVersion.get();
   return `<meta charset="UTF-8">
@@ -10,7 +10,7 @@ function head({ title, description, canonical, schemaHtml = "" }) {
   <meta name="description" content="${description}">
   <link rel="canonical" href="${url}">
   <meta name="theme-color" content="#0D2E51">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="${robots}">
 
   <meta property="og:type" content="business.business">
   <meta property="og:title" content="${title}">

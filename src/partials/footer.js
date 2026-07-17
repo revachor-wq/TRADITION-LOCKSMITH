@@ -17,7 +17,10 @@ function footer() {
     <div class="site-footer__grid">
       <div class="footer-col footer-col--brand">
         <a class="brand brand--footer" href="/">
-          <img src="/images/brand/emblem-sm.png" alt="" width="44" height="32" class="brand__mark">
+          <picture>
+            <source srcset="/images/brand/emblem-sm.webp" type="image/webp">
+            <img src="/images/brand/emblem-sm.png" alt="" width="44" height="32" class="brand__mark" loading="lazy">
+          </picture>
           <span class="brand__name">Tradition <em>Locksmith</em></span>
         </a>
         <p class="footer-col__tagline">Serving the Treasure Coast, Florida</p>

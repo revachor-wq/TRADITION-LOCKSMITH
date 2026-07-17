@@ -11,12 +11,13 @@ function layout({
   activePath = "/",
   bodyClass = "",
   schemaHtml = "",
+  robots,
   content,
 }) {
   return `<!doctype html>
 <html lang="en">
 <head>
-${head({ title, description, canonical, schemaHtml })}
+${head({ title, description, canonical, schemaHtml, ...(robots ? { robots } : {}) })}
 </head>
 <body class="${bodyClass}">
   <a class="skip-link" href="#main">Skip to content</a>
