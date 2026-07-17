@@ -172,6 +172,7 @@ function buildPages() {
     title: "Page Not Found | Tradition Locksmith",
     description: "The page you're looking for couldn't be found.",
     canonical: "/404.html",
+    robots: "noindex, follow",
     content: notFound.render(),
   });
   fs.writeFileSync(path.join(OUT, "404.html"), html404);
